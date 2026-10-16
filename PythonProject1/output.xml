@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-07-18T15:01:29.862774" rpa="false" schemaversion="5">
+<suite id="s1" name="Sample Test" source="C:\Users\gagan\PycharmProjects\PythonProject1\sample_test.robot">
+<test id="s1-t1" name="Search Google" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-18T15:01:30.216214" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-18T15:01:30.215964" elapsed="3.356497"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-18T15:01:33.573389" level="INFO">Typing text 'Robot Framework' into text field 'name=q'.</msg>
+<arg>name=q</arg>
+<arg>${SEARCH_TERM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-18T15:01:33.572977" elapsed="0.104990"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-07-18T15:01:33.678757" level="INFO">Sending key(s) ('\\13',) to name=q element.</msg>
+<msg time="2025-07-18T15:01:33.995779" level="INFO">Sending keys \13</msg>
+<arg>name=q</arg>
+<arg>\\13</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-07-18T15:01:33.678339" elapsed="0.334583"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-18T15:01:34.189521" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-07-18T15:01:34.189663" level="FAIL">Page should have contained text 'Robot Framework' but did not.</msg>
+<arg>${SEARCH_TERM}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2025-07-18T15:01:34.013333" elapsed="0.177707">Page should have contained text 'Robot Framework' but did not.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-07-18T15:01:34.191464" elapsed="0.000031"/>
+</kw>
+<status status="FAIL" start="2025-07-18T15:01:30.215063" elapsed="3.976771">Page should have contained text 'Robot Framework' but did not.</status>
+</test>
+<status status="FAIL" start="2025-07-18T15:01:29.864147" elapsed="4.328625"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Sample Test" id="s1" pass="0" fail="1" skip="0">Sample Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
